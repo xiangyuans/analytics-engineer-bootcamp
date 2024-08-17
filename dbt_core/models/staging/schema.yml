@@ -1,0 +1,179 @@
+version: 2
+
+models:
+  - name: stg_customer
+    description: This table includes details of customers
+    columns:
+      - name: customer_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+
+
+  - name: stg_employee_privileges
+    description: This table includes employee's privileges
+    columns:
+      - name: employee_id || privilege_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+  
+  
+  - name: stg_employees
+    description: This table includes details of employees
+    columns:
+      - name: employee_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+
+
+  - name: stg_inventory_transaction_types
+    description: This table includes different inventory transation types
+    columns:
+      - name: transaction_type_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+
+
+  - name: stg_inventory_transactions
+    description: This table includes information about inventory transaction on product level per transaction
+    columns:
+      - name: inventory_transaction_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+
+  
+  - name: stg_invoices
+    description: This table includes invoices for orders
+    columns:
+      - name: invoice_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+  
+
+  - name: stg_order_details_status
+    description: This table includes status of order product
+    columns:
+      - name: order_details_status_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+  
+
+  - name: stg_order_details
+    description: This table includes details of orders on the product level
+    columns:
+      - name: order_line_item_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+  
+
+  - name: stg_orders_status
+    description: This table includes status of order product
+    columns:
+      - name: order_status_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+
+  
+  - name: stg_orders_tax_status
+    description: This table includes different tax status 
+    columns:
+      - name: tax_status_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+  
+
+  - name: stg_orders
+    description: This table includes order level information. It should be one row per order
+    columns:
+      - name: order_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+  
+
+  - name: stg_privileges
+    description: This table includes different tyoes of privileges for employees
+    columns:
+      - name: privilege_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+
+  
+  - name: stg_products
+    description: This table includes detailed information about each product. It should be one row per product
+    columns:
+      - name: product_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+
+  
+  - name: stg_purchase_order_details
+    description: This table includes detailed information about purchase order. The granularity is on the product level.
+    columns:
+      - name: purchase_line_item_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+
+
+  - name: stg_purchase_orders
+    description: This table includes information about each purchase order. It should be one row per purchase order
+    columns:
+      - name: purchase_order_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+
+
+  - name: stg_sales_reports
+    description: This table includes information about sales reports
+
+
+  - name: stg_shippers
+    description: This table includes details of shippers
+    columns:
+      - name: shipper_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+
+
+  - name: stg_strings
+    description: This table includes random information
+
+
+  - name: stg_suppliers
+    description: This table includes details of suppliers
+    columns:
+      - name: supplier_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
