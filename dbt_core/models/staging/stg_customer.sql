@@ -4,7 +4,8 @@
    )
 }}
 
-SELECT DISTINCT -- dedup records
+SELECT
+
     CAST(id AS INT) AS customer_id,
     CAST(company AS STRING) AS company,
     CAST(last_name AS STRING) AS last_name,
@@ -24,4 +25,6 @@ SELECT DISTINCT -- dedup records
     CAST(notes AS STRING) AS notes,
     CAST(attachments AS STRING) AS attachments,
     CURRENT_TIMESTAMP() AS ingestion_timestamp
-FROM {{ source ('northwind', 'customer')}} 
+
+FROM {{ source ('northwind', 'customer')}}
+QUALIFY ROW_NUMBER() OVER (PARTITION BY id) = 1 -- dedup records
