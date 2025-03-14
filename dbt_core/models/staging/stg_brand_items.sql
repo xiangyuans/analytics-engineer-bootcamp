@@ -4,7 +4,7 @@
    )
 }}
 -- brand item table with granularity on item level by brand
--- primary key is rhe brand_item_id
+-- primary key is the brand_item_id
 SELECT
   SAFE_CAST(_id.oid AS STRING) AS brand_item_id,
   SAFE_CAST(barcode AS STRING) AS item_barcode, -- CAST barcode to be string as barcode could start with 0
