@@ -6,7 +6,7 @@
 -- this table demonstrates the brand rank by sales (items final prices from each receipts) by scanned month
 -- by using brand_sales_rank, it can be filtered to top N brands over time. for example,
 -- as stakeholder is interested in the top 5 brand, use brand_sales_rank <= 5 in the where clause
--- is_current_month and brand_sales_rank <= 5 can be used together to pull the top 5 brand in the moce recent month
+-- is_current_month and brand_sales_rank <= 5 can be used together to pull the top 5 brand in the most recent month
 -- as well as the top 5 brands for the previous month
 
 WITH sales_by_brand AS (
