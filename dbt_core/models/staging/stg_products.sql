@@ -6,7 +6,7 @@
 
 SELECT
    CAST(id AS INT) AS product_id,
-   CAST(LEFT(supplier_ids,1) AS INT) AS supplier_id, -- get the first value as the supplier id for some data point
+   CAST(supplier_ids AS STRING) AS supplier_id, --a list od suppliers that sell this product
    CAST(product_code AS STRING) AS product_code,
    CAST(product_name AS STRING) AS product_name,
    CAST(description AS STRING) AS description,
