@@ -14,7 +14,7 @@ WITH sales_by_brand AS (
     DATE_TRUNC(fr.date_scanned, MONTH) AS scanned_month,
     fri.brand_code AS brand_code,
     db.brand_name,
-    ROUND(SUM(COALESCE(item_final_price,item_price)),2) AS sales,
+    ROUND(SUM(COALESCE(item_final_price,item_price)),2) AS sales, -- in case the final price is null, using the item_price as the secondary value
     SUM(fri.quantity) AS quantity
 
   FROM {{ ref('fact_receipt_items')}} fri
