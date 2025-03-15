@@ -32,11 +32,12 @@ To Ensure reliable reporting, I am adressing:
     - users table: last login date
     - brands table: brand code and topBrand
     - receipts table:receipt details, including purchased item quantity, price, barcode, and brandcode 
-3. **Inconsistent role** in user table.'fetch-staff' in stead of 'consumer'under role 
+ - **Inconsistent role** in user table.'fetch-staff' in stead of 'consumer'under role 
 
 As our datasets grow (especially receipts), optimizing how we manage this data will improve efficiency and reduce costs. Your insights will ensure these updates align with operational needs.
 
-**Next Steps**: Please share your thoughts or suggest a time to discuss further!
+### Next Steps
+Please share your thoughts or suggest a time to discuss further!
 
 Thank you,
 Xiangyuan
