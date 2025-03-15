@@ -26,7 +26,7 @@ I’m Xiangyuan, a new member of the Data Team. As part of my onboarding, I’ve
   - How often do you use this data (daily/weekly/monthly)?
 
 ### Current data quality issues
-To Ensure reliable reporting, I am adressing:
+To Ensure reliable reporting, I am addressing:
  - **Duplicates** Repeated user records
  - **Missing values** in key fields
     - users table: last login date
