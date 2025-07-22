@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: user_retention
+    description: This table contain user retention state, including daily retention and weekly retention
+    columns:
+      - name: user_id || firm_id || date
+        description: "surrogate key from three columns: user_id, firm_id, date, as the primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+
+  - name: monthly_user_engagement
+    description: This table demonnstrates each user per firm monthly engagement with harvey platform.
+                The engagement is classified to 5 levels, including no, low, average, good, and high.
+                0 activity = no; <= 4 activities = low; <= 8 activities = average; <= 12 = good; > 12 = high
+    columns:
+      - name: months || user_id || firm_id || query_type
+        description: "surrogate key from four columns: months, user_id, firm_id, query_type, as the primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+
+  - name: monthly_firm_usage_summary
+    description: This table demonnstrates each firm monthly utilization of harvey platform with indicators below.
+                  active users; total_queries; queries_per_user; adoption_rate  
+                  It is assumed that a firm's size or arr could change over time. Hence, a average firm size & arr
+                  are used for each month to avoid multiple rows per firm per month
+    columns:
+      - name: months || firm_id
+        description: "surrogate key from four columns: months and firm_id, as the primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+
