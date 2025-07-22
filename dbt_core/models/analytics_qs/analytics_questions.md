@@ -32,3 +32,8 @@ Users meeting either criterion exhibit substantially higher platform interaction
   - Shows one-to-many mapping between `user_id` and `firm_id` (single user linked to multiple firms)
   - Example: `user_id: 633c06694d118c8578aac99bfd96d5a7` appears with multiple `firm_id` values
   - **Concern**: Violates expectation that users belong to a single firm (expected 1:1 relationship)
+
+  - **Missing Primary Key Constraint**  
+  - No obvious primary key defined in raw events table  
+  - **Impact**: Cannot validate row uniqueness, risking duplicate records  
+  - **Example**: Difficult to ensure each event is unique 
