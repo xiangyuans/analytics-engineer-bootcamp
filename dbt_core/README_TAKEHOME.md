@@ -60,4 +60,4 @@
   Average queries per user: `total_queries / firm_size`
   
 - **`adoption_rate`**:  
-  Percentage of active users: `(active_users / firm_size) × 100%`
+  ratio of active users: `(active_users / firm_size)`
