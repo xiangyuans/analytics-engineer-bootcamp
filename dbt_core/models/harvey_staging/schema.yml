@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: stg_event
+    description: This table includes details of events from users
+    columns:
+      - name: event_id
+        description: "The auto generated value as the primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+  
+  - name: stg_user
+    description: This table includes details of users from each firm
+    columns:
+      - name: user_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_firm
+    description: This table includes details of each firm
+    columns:
+      - name: firm_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null

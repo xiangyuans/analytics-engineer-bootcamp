@@ -1,0 +1,8 @@
+version: 2
+sources:
+  - name: harvey
+    schema: raw
+    tables:
+      - name: events
+      - name: harvey_users
+      - name: harvey_firms

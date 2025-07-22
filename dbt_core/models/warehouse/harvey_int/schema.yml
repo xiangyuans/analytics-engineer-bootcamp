@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: int_user
+    description: This table includes details of users from each firm
+    columns:
+      - name: user_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+
+  - name: int_firm
+    description: This table includes details of each firm
+    columns:
+      - name: firm_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+
+  - name: int_firm_scd
+    description: This is the slowly change version of the firm table. It captures any changes on firm size and arr.
+                  Each firm has one or more rows
+    columns:
+      - name: dbt_scd_id
+        description: "The system generated primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+
+  - name: int_event
+    description: This table includes details of events from users
+    columns:
+      - name: event_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
